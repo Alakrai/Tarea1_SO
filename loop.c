@@ -20,15 +20,9 @@ int main()
         dup(guardaStdout); // Asigno la salida estandar, es decir, la consola.
         close(0); // Cierro la salida que tenga, caso de haber guardado algo en un fichero sera el fichero
         dup(guardaStdin); // Asigno la salida estandar, es decir, la consola.
-	printf(PROMPT); // Imprimimos el prompt
-	scanf("\n%[^\n]",cadena); // Escaneamos la cadena entera hasta que pulsa intro
-	segplano=0;
-	
-		if(cadena[i] == '&') 
-		{
-			cadena[i] = '\0';
-			segplano = 1;
-		}
+		printf(PROMPT); // Imprimimos el prompt
+		scanf("\n%[^\n]",cadena); // Escaneamos la cadena entera hasta que pulsa intro
+		segplano=0;
 		a=strncmp(cadena, Fin, 5);
 		if(a==0)
 		{
@@ -48,7 +42,7 @@ int main()
 			printf("  V__________: \\        / :_|=======================/_____: \\       / :__-\\\"      \n");
 			printf("  -----------'  \"\"____\"\"  `-------------------------------'  \"\"____\"\"               \n");
 		}
-	//Comandos(cadena,segplano); //si no es exit, entra en la funcion Comandos
+		//Comandos(cadena,segplano); //si no es exit, entra en la funcion Comandos
 	}
 }
 
