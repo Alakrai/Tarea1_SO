@@ -23,19 +23,32 @@ int main()
 	printf(PROMPT); // Imprimimos el prompt
 	scanf("\n%[^\n]",cadena); // Escaneamos la cadena entera hasta que pulsa intro
 	segplano=0;
-	for(i=0;cadena[i] != '\0'; i++)
-	{
+	
 		if(cadena[i] == '&') 
 		{
 			cadena[i] = '\0';
 			segplano = 1;
 		}
-	}
 		a=strncmp(cadena, Fin, 5);
 		if(a==0)
 		{
 			fin=1;
 		} // Comparamos si la cadena es exit, en tal caso sale
+		a=strncmp(cadena,"arte", 5);
+		if(a==0)
+		{
+			printf("                                    _._                                           \n");
+			printf("                               _.-=\\\"_-       _                                   \n");
+			printf("                          _.-=\"   _-          | ||\"\"\"\"\"\"\"---._______     __..       \n");
+			printf("              ___.===\"\"\"\"-.______-,,,,,,,,,,,,`-''----\" \"\"\"\"\"      \"\"\"\"\"  __'      \n");
+			printf("       __.--\"\"   __     ,'                 o \\         __       [__|       \n");
+			printf("  __-\"\"=======.--\"\"  \"\"--.=================================.--\"\"  \"\"--.=======:   \n");
+			printf(" ]     [w] : /      \\ : |========================|  : /     \\ :  [w] :    \n");
+			printf(" V___________:|       |: |========================| :|        |:   _-\"     \n");
+			printf("  V__________: \\        / :_|=======================/_____: \\       / :__-\\\"      \n");
+			printf("  -----------'  \"\"____\"\"  `-------------------------------'  \"\"____\"\"               \n");
+		}
 	//Comandos(cadena,segplano); //si no es exit, entra en la funcion Comandos
 	}
 }
+
